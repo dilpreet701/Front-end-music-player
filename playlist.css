@@ -1,0 +1,332 @@
+body{
+	background:#0c1027;
+	display:flex;
+	flex-direction:column;
+	font-family:sans-serif;
+	flex-wrap:wrap;
+	height:1000px;
+}
+
+/*/nav bar menu/*/
+#header{
+	position:relative;
+	margin-bottom:8%;
+	z-index:5;
+}
+nav{
+	position:fixed;
+	top:0;
+	left:0px;
+	width:100%;
+	display:flex;
+	opacity:1;
+	background:#0c1027;
+	justify-content:space-around;
+}
+nav .box{
+	display:flex;
+	width:50%;
+	margin-top:40px;
+	margin-left:10%
+}
+nav div img{
+	width:60px;
+	height:60px;
+	border-radius:50%;	
+}
+nav #icon img{
+	margin-left:-70px;
+}
+nav #icon a{
+	text-decoration:none;
+	font-size:1.2rem;
+	color:white;
+	font-weight:100;
+	font-family:sans-serif;
+	margin-left:40px;
+	margin-top:15px;
+}
+nav div h4{
+	color:white;
+	font-size:1.5rem;
+	margin-left:20px;
+}
+nav #self i{
+	color:white;
+	font-weight:900;
+	font-size:1.5rem;
+	margin:10px 20px 0px 20px;
+}
+nav #self {
+	margin-right:20px;
+}
+nav #self #search-icon{
+	position:relative;
+	color:white;
+	font-weight:900;
+	font-size:0.8rem;
+	background:#12193e;
+	border-radius:10px;
+	margin-right:-30px;
+}
+nav #self #microphone{
+	position:relative;
+	color:white;
+	font-weight:900;
+	font-size:1rem;
+	background:#12193e;
+	border-radius:10px;
+	margin-left:-25px;
+}
+
+nav #self input{
+	width:250px;
+	padding:8px 10px 8px 30px;
+	border-radius:10px;
+	background:#12193e;
+	border:0px;
+	color:white;
+}
+
+
+/*mobile view media header*/
+@media (max-width:872px){
+	nav #self #microphone{
+		display:none;
+	}
+	nav #icon a{
+		display:none;
+	}
+	nav #self input{
+		width:150px;
+		margin-top:-25px;
+	}
+	nav div img{
+	width:30px;
+	height:30px;
+	border-radius:50%;	
+	}
+	nav #icon img{
+		margin-top:-5px;
+		margin-left:-10px;
+	}
+	nav div h4{
+	color:white;
+	font-size:1.1rem;
+	margin-left:10px;
+	margin-top:-1px;
+	font-weight:100;
+	}
+	nav #self #search-icon{
+		margin-left:-25px;
+	}
+}
+
+#content{
+	display:flex;
+	position:relative;
+	justify-content: center;
+	top:80px;
+	margin-top:50px;
+	z-index:1;
+}
+#left{
+	display:flex;
+	flex-direction:column;
+	width:65%;
+	margin-left: 8%;
+	align-content:center;
+	position:relative;
+}
+#right{
+	display:flex;
+	flex-direction:column;
+	width:35%;
+	margin-top:20px;
+	flex-wrap:wrap;
+}
+#right #list h4{
+	display:inline;
+	color:white;
+	font-size:1.5rem;
+}
+#right #list h5{
+	display:inline;
+	color:grey;
+	font-size:1rem;
+	font-weight:100;
+	margin-left:20%;
+}
+
+/*image section*/
+#left #images{
+	display:flex;
+	position:relative;
+	width:95%;
+	background:#141b41;
+	top:0px;
+	height:40vh;
+}
+#left #images img{
+	width:30%;
+	height:40vh;
+}
+#about-list{
+	display:flex;
+	flex-direction: column;
+}
+#about-list h2{
+	color:white;
+	margin-left:2%;
+	margin-top:50px;
+}
+#about-list h5{
+	color:grey;
+	margin-left:2%;
+	margin-top:-10px;
+}
+#about-list p{
+	color:grey;
+	margin-left:2%;
+	margin-top:-10px;
+}
+button{
+	background-color:#4327b4;
+	width:14%;
+	color:white;
+	padding:8px 13px 6px 17px;
+	border:0px;
+	margin-left:2%;
+	display:inline-block;
+}
+#about-list h3{
+	display:inline;
+	color:white;
+	margin-left:15%;
+}
+/*righ list*/
+#queue-list{
+	margin-top:10px;
+	display:flex;
+	flex-direction:column;
+}
+.ql-songs{
+	display:flex;
+}
+.ql-songs h4{
+	vertical-align:top;
+	color:white;
+	width:100px;
+	margin-left:4%;
+}
+.ql-songs i{
+	margin-left:18%;
+	color:grey;
+	margin-top:3%;
+}
+#recently-played .ql-songs i{
+	margin-left:20%;
+	color:grey;
+	margin-top:4%;
+}
+.ql-songs img{
+	width:80px;
+	height:50px;
+	margin-bottom:10px;
+}
+#recently-played .ql-songs img{
+	width:50px;
+	height:50px;
+}
+audio{
+	display:none;
+}
+#recently-played #list h5{
+	margin-left:15%;
+}
+.ql-songs h6{
+	color:grey;
+	margin-right:3%;
+}
+
+/*left songs*/
+#songs .r-songs img{
+	height:50px;
+	width:50px;
+	margin-top:10px;
+}
+#songs{
+	margin-top:30px;
+	display:flex;
+	flex-direction:column;
+	width:100%;
+}
+.r-songs{
+	display:flex;
+	width:95%;
+	background:#1a1e33;
+	position:relative;
+	margin-bottom:10px;
+}
+.r-songs h6{
+	color:grey;
+	margin-left:2%;
+	margin-right:2%;
+	margin-top:4%;
+}
+.r-songs h4{
+	vertical-align:middle;
+	color:white;
+	width:100px;
+	margin-left:2%;
+	margin-top:4%;
+	display:inline;
+}
+.r-songs i{
+	position:absolute;
+	right:10%;
+	top:40%;
+	color:grey;
+}
+.r-songs #plus{
+	right:6%;
+}
+
+@media (max-width:872px){
+	#content{
+		flex-direction:column;
+		top:50px;
+	}
+	#right{
+		margin-left:4%;
+	}
+	#left{
+		width:100%;
+		top:50px;
+		overflow:hidden;
+		margin-left:4%;
+	}
+	#about-list{
+		position:relative;
+		top:-50px;
+		overflow:hidden;
+	}
+	#about-list p{
+	text-overflow: ellipsis;
+	}
+	.r-songs #heart{
+		right:20%;
+	}
+	.r-songs h4{
+		margin-top:8%;
+	}
+	.r-songs h6{
+		margin-top:8%;
+	}
+	#right{
+		position:relative;
+		top:10vh;
+		margin-left:4%;
+		width:100%;
+	}
+}

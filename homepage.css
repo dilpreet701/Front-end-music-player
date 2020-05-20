@@ -1,0 +1,416 @@
+body{
+	background:#0c1027;
+	display:flex;
+	flex-direction:column;
+	font-family:sans-serif;
+	flex-wrap:wrap;
+}
+
+/*/nav bar menu/*/
+#header{
+	position:relative;
+	margin-bottom:8%;
+	z-index:5;
+}
+nav{
+	position:fixed;
+	top:0;
+	left:0px;
+	width:100%;
+	display:flex;
+	opacity:1;
+	background:#0c1027;
+	justify-content:space-around;
+}
+nav .box{
+	display:flex;
+	width:50%;
+	margin-top:40px;
+	margin-left:10%
+}
+nav div img{
+	width:60px;
+	height:60px;
+	border-radius:50%;	
+}
+nav #icon img{
+	margin-left:-70px;
+}
+nav #icon a{
+	text-decoration:none;
+	font-size:1.2rem;
+	color:white;
+	font-weight:100;
+	font-family:sans-serif;
+	margin-left:40px;
+	margin-top:15px;
+}
+nav div h4{
+	color:white;
+	font-size:1.5rem;
+	margin-left:20px;
+}
+nav #self i{
+	color:white;
+	font-weight:900;
+	font-size:1.5rem;
+	margin:10px 20px 0px 20px;
+}
+nav #self {
+	margin-right:20px;
+}
+nav #self #search-icon{
+	position:relative;
+	color:white;
+	font-weight:900;
+	font-size:0.8rem;
+	background:#12193e;
+	border-radius:10px;
+	margin-right:-30px;
+}
+nav #self #microphone{
+	position:relative;
+	color:white;
+	font-weight:900;
+	font-size:1rem;
+	background:#12193e;
+	border-radius:10px;
+	margin-left:-25px;
+}
+
+nav #self input{
+	width:250px;
+	padding:8px 10px 8px 30px;
+	border-radius:10px;
+	background:#12193e;
+	border:0px;
+	color:white;
+}
+
+
+/*mobile view media header*/
+@media (max-width:872px){
+	nav #self #microphone{
+		display:none;
+	}
+	nav #icon a{
+		display:none;
+	}
+	nav #self input{
+		width:150px;
+		margin-top:-25px;
+	}
+	nav div img{
+	width:30px;
+	height:30px;
+	border-radius:50%;	
+	}
+	nav #icon img{
+		margin-top:-5px;
+		margin-left:-10px;
+	}
+	nav div h4{
+	color:white;
+	font-size:1.1rem;
+	margin-left:10px;
+	margin-top:-1px;
+	font-weight:100;
+	}
+	nav #self #search-icon{
+		margin-left:-25px;
+	}
+}
+
+
+/*content*/
+#content{
+	display:flex;
+	position:relative;
+	justify-content: center;
+	top:50px;
+	margin-top:20px;
+	z-index:1;
+}
+#left{
+	display:flex;
+	flex-direction:column;
+	width:65%;
+	margin-left: 8%;
+	align-content:center;
+}
+#right{
+	display:flex;
+	flex-direction:column;
+	width:35%;
+	flex-wrap:wrap;
+}
+#right h1{
+	display:inline;
+	color:white;
+	font-size:2rem;
+}
+#right #list h5{
+	display:inline;
+	color:green;
+	font-size:1rem;
+	font-weight:100;
+	margin-left:30%;
+}
+#right #list ul {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+   margin-left:60%;
+   display:none;
+   
+}
+#right #list ul li {
+    display:block;
+    margin: 0px 8px 1px 0px;
+    padding:5px 5px 5px 15px;
+    font-weight: 900;
+    font-size: 0.9rem;
+    background:white;
+}
+#right #list ul li a{
+	color: black;
+    text-decoration: none;
+}
+#right #list :hover #right #list ul{
+    display:none;
+}
+/*image section*/
+#left #images{
+	display:block;
+	position:relative;
+	width:100%;
+	height: 40vh;
+}
+
+#left #music-1{
+	width:50%;
+	height:35vh;
+	z-index:5;
+	position:absolute;
+	left:15%;
+	top:-10px;
+}
+#left #music-2{
+	position:absolute;
+	left:0;
+	top:10px;
+	width:50%;
+	height:30vh;
+}
+
+#left #music-3{
+	position:absolute;
+	right:10%;
+	top:10px;
+	width:50%;
+	height:30vh;
+}
+#left #images img:hover{
+	width:54%;
+	height:38vh;
+	top:-30px;
+	z-index:7;
+}
+/*Latest release*/
+.heading h3{
+	display: block;
+	color:white;
+	font-size:1.3rem;
+	font-weight:700;
+	margin-bottom:10px;
+}
+#lr-songs{
+	display: flex;
+	position:relative;
+	width:100%;
+	flex-wrap:wrap;
+}
+#lr-songs .song{
+	width:45%;
+	margin-bottom:15px;
+}
+#lr-songs img{
+	width:100px;
+	height:100px;
+}
+#lr-songs div{
+	display:inline-block;
+	color:white;
+	vertical-align:top;
+}
+#lr-songs h4{
+	font-size:0.8rem;
+	font-weight:100;
+	margin-left:15px;
+}
+#lr-songs h4 span{
+	position:relative;
+	top:7px;
+	color:grey;
+}
+#lr-songs .icon {
+	color:white;
+	float:right;
+	margin-right:7%;
+	margin-top:-10px;
+}
+
+#lr-songs img:active~ audio{
+	display:block;
+	vertical-align:bottom;
+	position:fixed;
+	background:black;
+	width:100%;
+	height:10%;
+	left:0;
+	bottom:0;
+}
+ /*top artist*/
+ #singers{
+ 	display:flex;
+ 	width:100%;
+ 	flex-wrap:wrap;
+ 	position:relative;
+ 	margin-top:3%;
+
+ }
+ #singers img{
+ 	border-radius:50%;
+ 	width:120px;
+ 	height:120px;
+ 	margin-right:1%;
+ }
+ #singers  a{
+ 	margin-right:1%;
+ }
+
+ /*party type-songs*/
+#song-type{
+	display:flex;
+	position:relative;
+	flex-wrap:wrap;
+	margin-top:4%;
+}
+ .p-song{
+	position:relative;
+	margin-right:3%;
+}
+#song-type img{
+	width:230px;
+	height:120px;
+	margin-bottom:5%;
+}
+#song-type .p-song h3{
+	color:white;
+	position:absolute;
+	left:35%;
+	bottom:35%;
+	font-size:1.2rem;
+	font-weight:300;
+}
+#song-type .p-song img:hover {
+	width:240px;
+	height:140px;
+	margin-top:-10px;
+}
+/*english-songs*/
+#english-songs{
+	margin-top:3%;
+}
+#english-songs #eng{
+	display:flex;
+	flex-wrap:wrap;
+}
+#english-songs h3{
+	color:white;
+}
+#english-songs #eng .e-songs{
+	margin-right:5%;
+}
+.e-songs img{
+	width:90px;
+	height:100px;
+}
+/*queue playlist*/
+#queue-list{
+	margin-top:30px;
+	display:flex;
+	flex-direction:column;
+}
+.ql-songs{
+	display:flex;
+}
+.ql-songs h6{
+	color:grey;
+	margin-right:3%;
+}
+.ql-songs h4{
+	vertical-align:top;
+	color:white;
+	width:100px;
+	margin-left:3%;
+}
+.ql-songs i{
+	margin-left:20%;
+	color:grey;
+	margin-top:4%;
+}
+.ql-songs img{
+	width:50px;
+	height:50px;
+}
+
+@media (max-width:872px){
+	#right{
+		display:none;
+	}
+	#left{
+		width:100%;
+	}
+	#left #images img{
+		height:25vh;
+	}
+	#left #images img:hover{
+	width:54%;
+	height:33vh;
+	top:-20px;
+	z-index:7;
+}
+	#left #images #music-1{
+		height:30vh;
+	}
+	#lr-songs .icon {
+		display:none;
+	}
+	#lr-songs h4{
+		text-align:center;
+		position:relative;
+		left:-12px;
+	}
+	#singers a{
+		margin-bottom:20px;
+		margin-right:20px;
+	}
+	.heading{
+		top:-50px;
+	}
+	#left #images{
+		height:30vh;
+	}
+	#song-type{
+		margin-left:7%;
+	}
+	#song-type .p-song img{
+		margin-bottom:20px;
+	}
+	#english-songs #eng .e-songs{
+		margin-top:5%;
+		margin-right:20%;
+	}
+
+}
